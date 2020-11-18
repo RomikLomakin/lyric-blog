@@ -1,14 +1,28 @@
-const express = require('express');
-const path = require('path');
-const port = process.env.PORT || 8080;
-const app = express();
+var express = require('express');
+var app = express();
+var path = require('path');
 
-// the __dirname is the current directory from where the script is running
-app.use(express.static(__dirname));
 
-// send the user to index html page inspite of the url
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'index.html'));
+app.use(express.static(path.join(__dirname)));
+
+
+app.get('/json', function(req, res) {
+    console.log("GET the json");
+    res
+        .status(200)
+        .json( {"jsonData" : true} );
 });
 
-app.listen(port);
+app.get('/file', function(req, res) {
+    console.log("GET the file");
+    res
+        .status(200)
+        .sendFile(path.join(__dirname, 'index.html'));
+});
+
+
+
+var server = app.listen(process.env.PORT || 5000, function () {
+  var port = server.address().port
+  console.log("Express is working on port " + port)
+});

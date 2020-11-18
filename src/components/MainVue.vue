@@ -107,29 +107,6 @@
             </div>
           </div>
         </b-col>
-        <!-- <b-col cols="6">
-          <div class="last-news">
-            <div
-              class="img-wrap"
-              :style="{ backgroundImage: 'url(' + require('@img/news-2.jpg') + ')' }"
-            ></div>
-            <div class="item-info">
-              <div class="top-info">
-                <span class="category">Новости студии</span>
-                <span class="date">1.04.2020</span>
-              </div>
-              <h4>Вы тоже ах*еете!</h4>
-              <div class="item-statistic">
-                <div class="author">William</div>
-                <div class="item-activity">
-                  <div class="activity view">29</div>
-                  <div class="activity comments">12</div>
-                  <div class="activity like">19</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </b-col> -->
         <!-- <button class="btn more">Показать еще</button> -->
       </b-row>
     </b-container>
